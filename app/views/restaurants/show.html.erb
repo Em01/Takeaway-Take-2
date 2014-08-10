@@ -25,3 +25,11 @@
 
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %> |
 <%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
+
+<iframe
+  width="300"
+  height="300"
+  frameborder="0" style="border:0"
+  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCGfwXEd8qWmk6tRKQXvRwl7D6qApk4Z30
+    &q=@restaurant.address.parameterize %>">
+</iframe>
