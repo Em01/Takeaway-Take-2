@@ -11,19 +11,16 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :rating %><br>
-    <%= f.text_field :rating %>
+  <div class="form-group">
+    <%= f.label :rating %>
+    <%= f.number_field :rating, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :integer %><br>
-    <%= f.text_field :integer %>
+ 
+  <div class="form-group">
+    <%= f.label :comment %>
+    <%= f.text_area :comment, class: "form-control" %>
   </div>
-  <div class="field">
-    <%= f.label :comment %><br>
-    <%= f.text_area :comment %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit class: "btn btn-primary" %>
   </div>
 <% end %>
