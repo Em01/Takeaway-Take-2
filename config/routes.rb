@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :reviews
+  resources :reviews, except: [:show, :index]
+  #we want the full set of urls just not for show and index pages
 
   devise_for :users
   devise_for :models
