@@ -31,7 +31,7 @@
     <h3>No reviews yet. Be the first to write one!</h3>
     <% else %>
       <% @reviews.each do |review| %>
-        <div class="star-rating"></div>
+        <div class="star-rating" data-score= <%= review.rating %> ></div>
         <p><%= review.comment %></p>
       <% end %>
     <% end %>
@@ -43,7 +43,11 @@
 
 <script>
 $('.star-rating').raty({
-  path: 'https://s3.amazonaws.com/yelp_Take2/Stars'
+  path: 'https://s3.amazonaws.com/yelp_Take2/Stars',
+  readOnly: true,
+  score: function() {
+    return $(this).attr('data-score');
+  }
 });restaurant
 </script>
 
