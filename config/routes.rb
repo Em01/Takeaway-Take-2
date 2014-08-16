@@ -3,8 +3,10 @@ Rails.application.routes.draw do
   #we want the full set of urls just not for show and index pages
 
   devise_for :users
-  devise_for :models
-  resources :restaurants
+  # devise_for :models
+  resources :restaurants do 
+  resources :reviews, except: [:show, :index]
+end
 
   get 'pages/about'
 
