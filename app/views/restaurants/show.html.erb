@@ -42,7 +42,9 @@
 <%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
 
 <script>
-$('.star-rating').raty();restaurant
+$('.star-rating').raty({
+  path: 'https://s3.amazonaws.com/yelp_Take2/Stars'
+});restaurant
 </script>
 
 
